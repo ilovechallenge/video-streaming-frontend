@@ -1,0 +1,74 @@
+$backgroundColor: white;
+$headerColor: #b2b2b2;
+$btnBgColor: #e5e5e5;
+$btnBackColor: #333333;
+$btnOkColor: #4d4d4d;
+$btnCancelColor: #cccccc;
+$activeColor: #999999;
+$blackColor: #222222;
+
+@mixin flexMixin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btnMixin($bgColor, $fontSize) {
+    @include flexMixin();
+    background-color: $bgColor;
+    .btn-span {
+        font-size: $fontSize !important;
+    }
+}
+
+@mixin scrollMixin($width, $height) {
+    width: $width;
+    height: $height;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $headerColor;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient($btnBgColor, $btnBgColor);
+        border: 1px solid $btnOkColor;
+        border-radius: 10px;
+        background-size: 10px 30px; 
+    }
+    &::-webkit-scrollbar-button {
+        height: 100%; 
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $btnOkColor;
+    }
+}
+@mixin btnStamp {
+    position: relative;
+    border: 2px solid $headerColor;
+    border-radius: 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    img {
+        width: 7rem;
+        height: 2rem;
+    }
+    span {
+        width: 1.3rem;
+        height: 1.3rem;
+        position: absolute;
+        top: -0.8rem;
+        right: -0.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: $btnBackColor;
+        color: $backgroundColor;
+        border-radius: 50%;
+    }
+}

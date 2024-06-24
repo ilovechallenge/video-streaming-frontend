@@ -1,0 +1,101 @@
+body {
+  font-family: 'OT-PUDShinMGoPr6N', 'A-OTF UD Shin Maru Go Pr6N', 'Shin Maru Go',
+    'Noto Sans JP', sans-serif;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  line-break: strict;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #828282;
+    border-radius: 20px;
+    background-size: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    height: 100%;
+  }
+}
+
+#root {
+  width: 1690px;
+  height: 1080px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.modal-content {
+  border: 3px solid #bbbbbb;
+}
+.modal-header {
+  background-color: #bbbbbb;
+}
+.modal-body {
+}
+.modal-footer {
+  border: none;
+}
+.dropdown > button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 0;
+}
+.dropdown > button::after {
+  content: '';
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  padding: 5px;
+  transform: rotate(45deg);
+  margin-left: 4rem;
+}
+.custom-font {
+  font-family: 'Honoka', sans-serif;
+}
+
+button {
+  border: unset;
+  background: unset;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+hr {
+  opacity: unset;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
